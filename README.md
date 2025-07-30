@@ -13,16 +13,22 @@ Automates creation and recording of TwinCAT Measurement & Scope projects from a 
 
 ## Prerequisites
 
-- Windows 10/11 with TwinCAT 3 4026 (Measurement + Scope‑View modules installed)  
-  - Tested with package versions TwinCAT.Standard.XAE 4026.17.0 and TE1300.ScopeViewProfessional.XAE 34.49.7  
-- Visual Studio 2022 or later  
-- .NET 8.0 SDK  
-- NuGet packages:  
-  - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)  
-  - [EnvDTE](https://www.nuget.org/packages/envdte)  
-- TwinCAT COM assemblies on your PATH (default location: `C:\Program Files (x86)\Beckhoff\TwinCAT\Functions\TE130x-Scope-View`):  
-  - `TwinCAT.Measurement.AutomationInterface.dll`  
-  - `TwinCAT.Scope2.Communications.dll`  
+- **Windows 10/11** with TwinCAT 3 Package manager installed
+- **Required TwinCAT Modules**:
+  - TwinCAT.Standard.XAE 4026.17.0+
+  - TE1300.ScopeViewProfessional.XAE 34.49.7+
+- **Development Environment**:
+  - Visual Studio 2022 or later
+  - .NET 8.0 SDK
+- **NuGet Dependencies**:
+  - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)
+  - [EnvDTE](https://www.nuget.org/packages/envdte)
+
+### TwinCAT COM Assemblies
+
+Ensure these are in your PATH (typically at `C:\Program Files (x86)\Beckhoff\TwinCAT\Functions\TE130x-Scope-View`):
+- `TwinCAT.Measurement.AutomationInterface.dll`
+- `TwinCAT.Scope2.Communications.dll`
 
 ## Sample TwinCAT PLC Project
 
