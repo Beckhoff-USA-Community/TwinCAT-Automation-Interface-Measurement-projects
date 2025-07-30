@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN" Id="{fc0086a0-20ad-4912-99a1-fa5964b3bf9c}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	//Sinus
+	SinusWave	: FB_CTRL_SIGNAL_GENERATOR;
+	SinusParams : Tc2_ControllerToolbox.ST_CTRL_SIGNAL_GENERATOR_PARAMS := (tCtrlCycleTime := TIME#10MS, tTaskCycleTime := TIME#10MS, eSignalType := E_CTRL_SIGNAL_TYPE.eCTRL_SINUS, tCylceDuration := TIME#500MS, fAmplitude := 1000);
+	SinusSignal : LREAL;
+
+	//Sawtooth
+	SawTooth	   : FB_CTRL_SIGNAL_GENERATOR;
+	SawToothParams : Tc2_ControllerToolbox.ST_CTRL_SIGNAL_GENERATOR_PARAMS := (tCtrlCycleTime := TIME#10ms, tTaskCycleTime := TIME#10ms, eSignalType := E_CTRL_SIGNAL_TYPE.eCTRL_SAWTOOTH, tCylceDuration := TIME#500ms, fAmplitude := 1000);
+	SawToothSignal : LREAL;
+
+	//Triangle
+	TriangleWave   : FB_CTRL_SIGNAL_GENERATOR;
+	TriangleParams : Tc2_ControllerToolbox.ST_CTRL_SIGNAL_GENERATOR_PARAMS := (tCtrlCycleTime := TIME#10MS, tTaskCycleTime := TIME#10MS, eSignalType := E_CTRL_SIGNAL_TYPE.eCTRL_TRIANGLE, tCylceDuration := TIME#500MS, fAmplitude := 1000);
+	TriangleSignal : LREAL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[SinusWave(fManValue :=,
+		  eMode		:= E_CTRL_MODE.eCTRL_MODE_ACTIVE,
+		  fOut		=> SinusSignal,
+		  eState	=>,
+		  eErrorId	=>,
+		  bError	=>,
+		  stParams	:= SinusParams);
+
+SawTooth(fManValue :=,
+		 eMode	   := E_CTRL_MODE.eCTRL_MODE_ACTIVE,
+		 fOut	   => SawToothSignal,
+		 eState	   =>,
+		 eErrorId  =>,
+		 bError	   =>,
+		 stParams  := SawToothParams);
+
+TriangleWave(fManValue :=,
+			 eMode	   := E_CTRL_MODE.eCTRL_MODE_ACTIVE,
+			 fOut	   => TriangleSignal,
+			 eState	   =>,
+			 eErrorId  =>,
+			 bError	   =>,
+			 stParams  := TriangleParams);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,65 @@
+{
+  "measurementProject": {
+    "scopeProject": {
+      "dataPool": {
+        "adsAcquisitions": [
+            {
+                "name": "SawToothSignal",
+                "dataType": "REAL64",
+                "symbolName": "MAIN.SawToothSignal",
+                "targetPort": 851,
+                "targetSystem": "127.0.0.1.1.1"
+            },
+            {
+                "name": "SinusSignal",
+                "dataType": "REAL64",
+                "symbolName": "MAIN.SinusSignal",
+                "targetPort": 851,
+                "targetSystem": "127.0.0.1.1.1"
+            },
+            {
+                "name": "TriangleSignal",
+                "dataType": "REAL64",
+                "symbolName": "MAIN.TriangleSignal",
+                "targetPort": 851,
+                "targetSystem": "127.0.0.1.1.1"
+            }
+        ]
+      },
+      "charts": [
+        {
+          "type": "YT",
+          "axisGroups": [
+            {
+                "name": "SawTooth Axis",
+                "channels": [
+                    {
+                        "acquisition": "SawToothSignal",
+                        "name": "SawToothSignal"
+                    }
+                ]
+            },
+            {
+                "name": "Sinus Axis",
+                "channels": [
+                    {
+                        "acquisition": "SinusSignal",
+                        "name": "SinusSignal"
+                    }
+                ]
+            },
+            {
+                "name": "Triangle Axis",
+                "channels": [
+                    {
+                        "acquisition": "TriangleSignal",
+                        "name": "TriangleSignal"
+                    }
+                ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
