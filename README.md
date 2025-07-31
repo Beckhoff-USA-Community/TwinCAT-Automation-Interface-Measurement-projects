@@ -16,8 +16,8 @@ Automates creation and recording of TwinCAT Measurement & Scope projects from a 
 - **Windows 10/11** with TwinCAT 3 installed
   - **4026**
     - **Tested with package versions:**
-      - TwinCAT.Standard.XAE 4026.17.0+
-      - TE1300.ScopeViewProfessional.XAE 34.49.7+
+      - TwinCAT.Standard.XAE 4026.17.0
+      - TE1300.ScopeViewProfessional.XAE 34.49.7
   - **4024**
     - **Tested with install versions:**
       - TwinCAT XAE 4024.67
