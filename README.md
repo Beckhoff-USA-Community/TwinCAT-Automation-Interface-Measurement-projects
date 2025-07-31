@@ -13,10 +13,15 @@ Automates creation and recording of TwinCAT Measurement & Scope projects from a 
 
 ## Prerequisites
 
-- **Windows 10/11** with TwinCAT 3 Package manager installed
-- **Required TwinCAT Modules**:
-  - TwinCAT.Standard.XAE 4026.17.0+
-  - TE1300.ScopeViewProfessional.XAE 34.49.7+
+- **Windows 10/11** with TwinCAT 3 installed
+  - **4026**
+    - **Tested with package versions:**
+      - TwinCAT.Standard.XAE 4026.17.0+
+      - TE1300.ScopeViewProfessional.XAE 34.49.7+
+  - **4024**
+    - **Tested with install versions:**
+      - TwinCAT XAE 4024.67
+      - [TwinCAT 3 Measurement](https://www.beckhoff.com/en-us/support/download-finder/search-result/?download_group=574904317&download_item=97078319) 3.4.3149.8
 - **Development Environment**:
   - Visual Studio 2022 or later
   - .NET 8.0 SDK
@@ -25,8 +30,6 @@ Automates creation and recording of TwinCAT Measurement & Scope projects from a 
   - [EnvDTE](https://www.nuget.org/packages/envdte)
 
 ### TwinCAT COM Assemblies
-
-Ensure these are in your PATH (typically at `C:\Program Files (x86)\Beckhoff\TwinCAT\Functions\TE130x-Scope-View`):
 - `TwinCAT.Measurement.AutomationInterface.dll`
 - `TwinCAT.Scope2.Communications.dll`
 
