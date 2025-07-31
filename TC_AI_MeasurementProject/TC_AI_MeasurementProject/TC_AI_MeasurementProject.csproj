@@ -8,28 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <COMReference Include="TCatSysManagerLib">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>4</VersionMinor>
-      <VersionMajor>3</VersionMajor>
-      <Guid>3c49d6c3-93dc-11d0-b162-00a0248c244b</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="envdte" Version="17.14.40260" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
+  <!--
+    We assume TWINCAT3DIR is set to something like:
+      - C:\TwinCAT\3.1\   (4024 machine)
+      - C:\Program Files (x86)\Beckhoff\TwinCAT\3.1\   (4026 machine)
+    By tacking on “..\” we back out of the “3.1” into C:\TwinCAT (or the Program Files parent).
+  -->
   <ItemGroup>
     <Reference Include="TwinCAT.Measurement.AutomationInterface">
-      <HintPath>..\..\..\..\Program Files (x86)\Beckhoff\TwinCAT\Functions\TE130x-Scope-View\TwinCAT.Measurement.AutomationInterface.dll</HintPath>
+      <HintPath>$(TWINCAT3DIR)..\Functions\TE130x-Scope-View\TwinCAT.Measurement.AutomationInterface.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="TwinCAT.Scope2.Communications">
-      <HintPath>..\..\..\..\Program Files (x86)\Beckhoff\TwinCAT\Functions\TE130x-Scope-View\TwinCAT.Scope2.Communications.dll</HintPath>
+      <HintPath>$(TWINCAT3DIR)..\Functions\TE130x-Scope-View\TwinCAT.Scope2.Communications.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
 
