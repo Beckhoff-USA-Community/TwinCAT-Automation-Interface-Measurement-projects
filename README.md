@@ -41,7 +41,7 @@ A complementary TwinCAT solution **TwinCAT Project Signal Gen** is provided alon
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/your-org/TC_AI_MeasurementProject.git
+   git clone https://github.com/Beckhoff-USA-Community/TwinCAT-Automation-Interface-Measurement-projects.git
    cd TC_AI_MeasurementProject
    ```
 
