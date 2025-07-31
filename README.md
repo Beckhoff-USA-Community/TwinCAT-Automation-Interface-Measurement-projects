@@ -1,6 +1,6 @@
 # TC_AI_MeasurementProject
 
-Automates creation and recording of TwinCAT Measurement & Scope projects from a JSON configuration.  
+Automates the creation of TwinCAT Measurement & Scope projects from a JSON configuration.  
 
 ## Features
 
